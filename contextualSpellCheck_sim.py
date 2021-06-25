@@ -64,7 +64,7 @@ data_tuples = list(zip(x_list1,y_list1,score))
 results = pd.DataFrame(data_tuples, columns=['X','Y', 'Score'])  
 
 results = results.sort_values(by=['Score'], ascending=False)
-results = results[results['Score'] > 50]
+results = results[results['Score'] < 100 ]
 
 x_list3 = list(results['X'])
 y_list3 = list(results['Y'])
